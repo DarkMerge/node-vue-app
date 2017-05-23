@@ -7,8 +7,11 @@ if (!process.env.NODE_ENV) {
 
 var opn = require('opn')
 var path = require('path')
+var fs = require('fs')
 var express = require('express')
 var request = require('request')
+var Socket = require('simple-websocket')
+var socket = new Socket('ws://echo.websocket.org')
 var webpack = require('webpack')
 var proxyMiddleware = require('http-proxy-middleware')
 var webpackConfig = require('./webpack.dev.conf')
@@ -24,10 +27,20 @@ var proxyTable = config.dev.proxyTable
 var app = express()
 
 // my code
+socket.on('connect', function () {
+ // socket is connected!
+ socket.send('sup!')
+})
+
+socket.on('data', function (data) {
+ console.log('got message: ' + data)
+})
 
 app.get('/data', function (req, res) {
+  res.type('application/json');
   request('http://192.168.1.163:8085/data.json', function(error, response, body) {
-    res.send(body)
+    fs.
+    res.json(JSON.parse(body))
   })
 })
 

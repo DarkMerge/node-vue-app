@@ -1,17 +1,21 @@
 <template>
   <div id="app">
-    <p>{{count}}</p>
-    <p>
-      <button @click="increment">+</button>
-      <button @click="decrement">-</button>
-    </p>
+    <div>
+      {{getStatistics()}}
+    </div>
     <img src="./assets/logo.png">
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+import Vue from 'Vue'
+import VueResource from 'vue-resource'
 import store from './store'
+
+Vue.use(VueResource)
+
+const http = Vue.http;
 
 export default {
   name: 'app',
@@ -26,6 +30,14 @@ export default {
     },
     decrement () {
     	store.commit('decrement')
+    },
+    getStatistics() {
+      let data = {};
+
+      http.get('http://localhost:8080/data')
+      .then((response) => {
+        return response;
+      })
     }
   }
 }
