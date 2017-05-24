@@ -1,45 +1,19 @@
 <template>
   <div id="app">
-    <p>{{count}}</p>
-    <p>
-      <button @click="increment">+</button>
-      <button @click="decrement">-</button>
-    </p>
-    <img src="./assets/logo.png">
+    <dashboard></dashboard>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-import store from './store'
+import dashboard from '@/components/dashboard/Dashboard'
 
 export default {
   name: 'app',
-  computed: {
-    count () {
-	    return store.state.count
-    }
-  },
-  methods: {
-    increment () {
-      store.commit('increment')
-    },
-    decrement () {
-    	store.commit('decrement')
-    }
+  components: {
+    dashboard
   }
 }
-
-
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style lang="scss" src="./assets/main.scss"></style>

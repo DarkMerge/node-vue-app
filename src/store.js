@@ -5,10 +5,16 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    count: 0
+    stats: {},
+    localStats: {}
   },
   mutations: {
-  	increment: state => state.count++,
-    decrement: state => state.count--
+    updateStats (state, data) {
+      state.stats = data
+    },
+    updateLocalStats (state, data) {
+      console.log('data ', data);
+      state.localStats = data
+    }
   }
 })

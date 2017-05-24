@@ -1,0 +1,25 @@
+.farms {
+  padding: 15px 20px;
+  width: 1240px;
+  margin: 0 auto;
+}
+
+.farm {
+  padding: 15px 0;
+  border: 4px solid #fff;
+  border-radius: 3px;
+
+  .farm-col {
+    padding: 0 20px;
+
+    &.farm-left-col {
+      .farm-header-title {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .farm-header-title {
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,27 @@
+.flex {
+  display: flex;
+
+  &.align-center {
+    align-items: center;
+  }
+
+  &.space-between {
+    justify-content: space-between;
+  }
+
+  &.space-around {
+    justify-content: space-around;
+  }
+
+  > .flex-50 {
+
+  }
+
+  > .w-220px {
+    min-width: 220px;
+  }
+}
+
+.w-220px {
+  width: 220px;
+}
