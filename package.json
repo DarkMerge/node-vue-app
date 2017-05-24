@@ -12,7 +12,6 @@
   "dependencies": {
     "axios": "^0.16.1",
     "body-parser": "^1.17.2",
-    "bulma": "^0.4.1",
     "lodash": "^4.17.4",
     "request": "^2.81.0",
     "simple-websocket": "^5.0.2",
