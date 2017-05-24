@@ -1,7 +1,7 @@
 <template>
   <div class="farms">
-    <div class="farm">
-      <div class="farm-header flex align-center space-between">
+    <div class="farm center">
+      <div class="farm-header flex align-center">
         <div class="w-220px farm-col flex align-center space-around">
           <div class="farm-header-title">
             {{parsedStats.farmName}}
@@ -10,12 +10,12 @@
             {{parsedStats.gpuCount}} GPU
           </div>
         </div>
-        <div class="w-220px farm-col flex align-center space-around">
+        <div class="w-220px flex align-center space-around">
           <div class="farm-header-title">
-            {{parsedStats.farmName}}
+            Temp
           </div>
           <div class="farm-header-title">
-            {{parsedStats.gpuCount}} GPU
+            Fan
           </div>
         </div>
       </div>
@@ -23,17 +23,19 @@
         <div class="w-220px farm-col center">
           GPU NAME
         </div>
-        <div class="gpu-card flex align-center space-between">
+        <div class="gpu-card flex align-center">
           <div class="w-220px gpu-card">
             {{parsedStats.test ? parsedStats.test.Text : '-'}}
           </div>
-          <div class="w-220px flex ">
-            {{parsedStats.test ? parsedStats.test.Text : '-'}}
+          <div class="w-220px flex align-center space-around">
+            <div class="farm-header-title">
+              {{parsedStats.test ? parsedStats.test.tempData.Value : '-'}}
+            </div>
+            <div class="farm-header-title">
+              {{parsedStats.test ? parsedStats.test.tempData.Value : '-'}}
+            </div>
           </div>
         </div>
-      </div>
-      <div class="">
-        <pre>{{parsedStats.test ? parsedStats.test.Children : '-'}}</pre>
       </div>
     </div>
     <button type="button" v-on:click="reloadFarms">Reload</button>
@@ -41,6 +43,7 @@
 </template>
 
 <script>
+import _ from 'lodash'
 import store from '../../store'
 import api from '../../api'
 
@@ -53,6 +56,15 @@ export default {
     parsedStats () {
       if (store.state.stats.gpuStats && store.state.stats.gpuStats.Text) {
         store.state.stats.test = store.state.stats.gpuStats
+        store.state.stats.test.Children.forEach(elem => {
+          if (elem.Text === 'Temperatures') {
+            elem.Children.forEach(child => {
+              store.state.stats.test.tempData = {
+                Value: child.Value
+              }
+            });
+          }
+        });
       }
 	    return store.state.stats
     }
