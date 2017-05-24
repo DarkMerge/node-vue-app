@@ -8,6 +8,8 @@
   padding: 15px 0;
   border: 4px solid #fff;
   border-radius: 3px;
+  font-size: 14px;
+  text-transform: uppercase;
 
   .farm-col {
     padding: 0 20px;
@@ -22,4 +24,17 @@
   .farm-header-title {
     font-weight: 500;
   }
+}
+
+.gpu-card {
+  padding: 5px 0;
+}
+
+pre {
+  display: block;
+  padding: 6px;
+  background-color: yellow;
+  border: 2px;
+  opacity: .5;
+  color: #000;
 }

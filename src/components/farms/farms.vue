@@ -1,19 +1,40 @@
 <template>
   <div class="farms">
-    <div class="farm flex">
-      <div class="w-220px farm-col farm-left-col">
-        <div class="farm-header flex align-center space-around">
+    <div class="farm">
+      <div class="farm-header flex align-center space-between">
+        <div class="w-220px farm-col flex align-center space-around">
           <div class="farm-header-title">
-            {{parsedLocalStats.farmName}}
+            {{parsedStats.farmName}}
           </div>
           <div class="farm-header-title">
-            {{parsedLocalStats.gpuCount}} GPU
+            {{parsedStats.gpuCount}} GPU
+          </div>
+        </div>
+        <div class="w-220px farm-col flex align-center space-around">
+          <div class="farm-header-title">
+            {{parsedStats.farmName}}
+          </div>
+          <div class="farm-header-title">
+            {{parsedStats.gpuCount}} GPU
           </div>
         </div>
       </div>
-    </div>
-    <div>
-      <pre>{{parsedLocalStats.gpuStats}}</pre>
+      <div class="farm-col">
+        <div class="w-220px farm-col center">
+          GPU NAME
+        </div>
+        <div class="gpu-card flex align-center space-between">
+          <div class="w-220px gpu-card">
+            {{parsedStats.test ? parsedStats.test.Text : '-'}}
+          </div>
+          <div class="w-220px flex ">
+            {{parsedStats.test ? parsedStats.test.Text : '-'}}
+          </div>
+        </div>
+      </div>
+      <div class="">
+        <pre>{{parsedStats.test ? parsedStats.test.Children : '-'}}</pre>
+      </div>
     </div>
     <button type="button" v-on:click="reloadFarms">Reload</button>
   </div>
@@ -27,21 +48,18 @@ export default {
   name: 'farms',
   mounted: () => {
     api.getStats()
-    api.getLocalStats()
   },
   computed: {
     parsedStats () {
+      if (store.state.stats.gpuStats && store.state.stats.gpuStats.Text) {
+        store.state.stats.test = store.state.stats.gpuStats
+      }
 	    return store.state.stats
-    },
-    parsedLocalStats () {
-	    store.state.localStats.gpuCount = 6
-	    return store.state.localStats
     }
   },
   methods: {
     reloadFarms () {
       api.getStats()
-      api.getLocalStats()
     }
   }
 }

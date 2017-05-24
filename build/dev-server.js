@@ -7,7 +7,7 @@ if (!process.env.NODE_ENV) {
 
 var opn = require('opn')
 var path = require('path')
-var si = require('systeminformation')
+var fs = require('fs')
 var express = require('express')
 var request = require('request')
 var Socket = require('simple-websocket')
@@ -37,11 +37,9 @@ var app = express()
 //  console.log('got message: ' + data)
 // })
 
-app.get('/local-stats', function (req, res) {
-  si.graphics(function(data) {
-      res.send(data)
-  })
-})
+// app.get('/local-stats', function (req, res) {
+//
+// })
 
 app.get('/data', function (req, res) {
   request('http://192.168.1.163:8085/data.json', function(error, response, body) {

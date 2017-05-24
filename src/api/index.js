@@ -9,7 +9,7 @@ export default {
     axios.get('/data')
       .then((response) => {
         formattedData = {}
-        setDepth(response.data, 0)
+        setDepth(JSON.parse(JSON.stringify(response.data)), 0)
         store.commit('updateStats', formattedData)
       })
   },
@@ -69,8 +69,7 @@ function setDepth(data, depth, key) {
 
     if (_.isArray(data.Children) && data.Children.length === 1) {
       depth++
-      data.Children = data.Children[0]
-      setDepth(data.Children, depth)
+      setDepth(data.Children[0], depth)
     } else if (_.isArray(data.Children) && data.Children.length > 1) {
       depth++
       data.Children.forEach((elem) => {
@@ -83,13 +82,6 @@ function setDepth(data, depth, key) {
   } else {
     return formattedData;
   }
-  //  else if (depth === 2) {
-  //   formattedData['test-' + depth] = copyMainFields(data)
-  // } else if (depth > 2) {
-  //   formattedData['test-' + depth] = copyMainFields(data)
-  // }
-
-
 }
 
 function createCategory(child, title) {
