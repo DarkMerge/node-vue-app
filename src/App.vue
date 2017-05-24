@@ -10,9 +10,7 @@ import dashboard from '@/components/dashboard/Dashboard'
 
 export default {
   name: 'app',
-  components: {
-    dashboard
-  }
+  components: { dashboard }
 }
 </script>
 

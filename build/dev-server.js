@@ -7,7 +7,7 @@ if (!process.env.NODE_ENV) {
 
 var opn = require('opn')
 var path = require('path')
-// var si = require('systeminformation')
+var si = require('systeminformation')
 var express = require('express')
 var request = require('request')
 var Socket = require('simple-websocket')
@@ -27,6 +27,7 @@ var proxyTable = config.dev.proxyTable
 var app = express()
 
 // my code
+
 // socket.on('connect', function () {
 //  // socket is connected!
 //  socket.send('sup!')
@@ -37,15 +38,15 @@ var app = express()
 // })
 
 app.get('/local-stats', function (req, res) {
-  // si.graphics(function(data) {
-  //     res.send(data)
-  // })
+  si.graphics(function(data) {
+      res.send(data)
+  })
 })
 
 app.get('/data', function (req, res) {
   request('http://192.168.1.163:8085/data.json', function(error, response, body) {
-    res.type('application/json')
-    res.send(body)
+      res.type('application/json')
+      res.send(body)
   })
 })
 
