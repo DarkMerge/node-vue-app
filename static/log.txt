@@ -1,2 +1,0 @@
-        Date        , GPU Core Clock [MHz] , GPU Memory Clock [MHz] , GPU Temperature [°C] , Fan Speed (%) [%] , Fan Speed (RPM) [RPM] , GPU Load [%] , GPU Temp. #1 [°C] , Memory Usage (Dedicated) [MB] , Memory Usage (Dynamic) [MB] ,
-        

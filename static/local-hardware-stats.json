@@ -1,0 +1,123 @@
+
+
+__GENUS          : 2
+__CLASS          : Hardware
+__SUPERCLASS     : 
+__DYNASTY        : Hardware
+__RELPATH        : Hardware.InstanceId="3855",ProcessId="b6b52c37-2628-4d9d-ae3a-9db65b6bb294"
+__PROPERTY_COUNT : 6
+__DERIVATION     : {}
+__SERVER         : SERG-PC
+__NAMESPACE      : root\OpenHardwareMonitor
+__PATH           : \\SERG-PC\root\OpenHardwareMonitor:Hardware.InstanceId="3855",ProcessId="b6b52c37-2628-4d9d-ae3a-9db65b6bb294"
+HardwareType     : CPU
+Identifier       : /intelcpu/0
+InstanceId       : 3855
+Name             : Intel Xeon E5450
+Parent           : 
+ProcessId        : b6b52c37-2628-4d9d-ae3a-9db65b6bb294
+
+__GENUS          : 2
+__CLASS          : Hardware
+__SUPERCLASS     : 
+__DYNASTY        : Hardware
+__RELPATH        : Hardware.InstanceId="3840",ProcessId="b6b52c37-2628-4d9d-ae3a-9db65b6bb294"
+__PROPERTY_COUNT : 6
+__DERIVATION     : {}
+__SERVER         : SERG-PC
+__NAMESPACE      : root\OpenHardwareMonitor
+__PATH           : \\SERG-PC\root\OpenHardwareMonitor:Hardware.InstanceId="3840",ProcessId="b6b52c37-2628-4d9d-ae3a-9db65b6bb294"
+HardwareType     : SuperIO
+Identifier       : /lpc/f71889f
+InstanceId       : 3840
+Name             : Fintek F71889F
+Parent           : /mainboard
+ProcessId        : b6b52c37-2628-4d9d-ae3a-9db65b6bb294
+
+__GENUS          : 2
+__CLASS          : Hardware
+__SUPERCLASS     : 
+__DYNASTY        : Hardware
+__RELPATH        : Hardware.InstanceId="3868",ProcessId="b6b52c37-2628-4d9d-ae3a-9db65b6bb294"
+__PROPERTY_COUNT : 6
+__DERIVATION     : {}
+__SERVER         : SERG-PC
+__NAMESPACE      : root\OpenHardwareMonitor
+__PATH           : \\SERG-PC\root\OpenHardwareMonitor:Hardware.InstanceId="3868",ProcessId="b6b52c37-2628-4d9d-ae3a-9db65b6bb294"
+HardwareType     : HDD
+Identifier       : /hdd/0
+InstanceId       : 3868
+Name             : GOODRAM C50
+Parent           : 
+ProcessId        : b6b52c37-2628-4d9d-ae3a-9db65b6bb294
+
+__GENUS          : 2
+__CLASS          : Hardware
+__SUPERCLASS     : 
+__DYNASTY        : Hardware
+__RELPATH        : Hardware.InstanceId="3866",ProcessId="b6b52c37-2628-4d9d-ae3a-9db65b6bb294"
+__PROPERTY_COUNT : 6
+__DERIVATION     : {}
+__SERVER         : SERG-PC
+__NAMESPACE      : root\OpenHardwareMonitor
+__PATH           : \\SERG-PC\root\OpenHardwareMonitor:Hardware.InstanceId="3866",ProcessId="b6b52c37-2628-4d9d-ae3a-9db65b6bb294"
+HardwareType     : GpuAti
+Identifier       : /atigpu/0
+InstanceId       : 3866
+Name             : AMD Radeon HD 6670
+Parent           : 
+ProcessId        : b6b52c37-2628-4d9d-ae3a-9db65b6bb294
+
+__GENUS          : 2
+__CLASS          : Hardware
+__SUPERCLASS     : 
+__DYNASTY        : Hardware
+__RELPATH        : Hardware.InstanceId="3871",ProcessId="b6b52c37-2628-4d9d-ae3a-9db65b6bb294"
+__PROPERTY_COUNT : 6
+__DERIVATION     : {}
+__SERVER         : SERG-PC
+__NAMESPACE      : root\OpenHardwareMonitor
+__PATH           : \\SERG-PC\root\OpenHardwareMonitor:Hardware.InstanceId="3871",ProcessId="b6b52c37-2628-4d9d-ae3a-9db65b6bb294"
+HardwareType     : HDD
+Identifier       : /hdd/1
+InstanceId       : 3871
+Name             : Hitachi HDP725050GLA360
+Parent           : 
+ProcessId        : b6b52c37-2628-4d9d-ae3a-9db65b6bb294
+
+__GENUS          : 2
+__CLASS          : Hardware
+__SUPERCLASS     : 
+__DYNASTY        : Hardware
+__RELPATH        : Hardware.InstanceId="3839",ProcessId="b6b52c37-2628-4d9d-ae3a-9db65b6bb294"
+__PROPERTY_COUNT : 6
+__DERIVATION     : {}
+__SERVER         : SERG-PC
+__NAMESPACE      : root\OpenHardwareMonitor
+__PATH           : \\SERG-PC\root\OpenHardwareMonitor:Hardware.InstanceId="3839",ProcessId="b6b52c37-2628-4d9d-ae3a-9db65b6bb294"
+HardwareType     : Mainboard
+Identifier       : /mainboard
+InstanceId       : 3839
+Name             : MSI G41M-P33 Combo(MS-7592)
+Parent           : 
+ProcessId        : b6b52c37-2628-4d9d-ae3a-9db65b6bb294
+
+__GENUS          : 2
+__CLASS          : Hardware
+__SUPERCLASS     : 
+__DYNASTY        : Hardware
+__RELPATH        : Hardware.InstanceId="3859",ProcessId="b6b52c37-2628-4d9d-ae3a-9db65b6bb294"
+__PROPERTY_COUNT : 6
+__DERIVATION     : {}
+__SERVER         : SERG-PC
+__NAMESPACE      : root\OpenHardwareMonitor
+__PATH           : \\SERG-PC\root\OpenHardwareMonitor:Hardware.InstanceId="3859",ProcessId="b6b52c37-2628-4d9d-ae3a-9db65b6bb294"
+HardwareType     : RAM
+Identifier       : /ram
+InstanceId       : 3859
+Name             : Generic Memory
+Parent           : 
+ProcessId        : b6b52c37-2628-4d9d-ae3a-9db65b6bb294
+
+
+
