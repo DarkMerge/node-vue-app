@@ -4,7 +4,7 @@ module.exports = {
     descr: `сопоставляется с любым символом за исключением символов новой строки: \n, \r, \u2028 или \u2029`
   },
   processId: {
-    regExp: /,?ProcessId=("([^"]|"")*")/,
+    regExp: /ProcessId=("([^"]|"")*")/,
     descr: `Удаление всех ProcessId`,
     result: undefined
   },
