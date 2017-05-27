@@ -1,7 +1,7 @@
 <template>
   <div class="farms">
     <div class="farm center">
-      <div class="farm-header flex align-center">
+      <div class="farm-header flex align-center first">
         <div class="w-220px farm-col flex align-center space-around">
           <div class="farm-header-title">
             {{parsedStats.farmName}}
@@ -10,31 +10,52 @@
             {{parsedStats.gpuCount}} GPU
           </div>
         </div>
-        <div class="w-220px flex align-center space-around">
+      </div>
+      <div class="farm-header flex align-center">
+        <div class="w-220px flex farm-col center space-around">
+          GPU NAME
+        </div>
+        <div class="w-420px flex align-center space-around">
           <div class="farm-header-title">
             Temp
           </div>
           <div class="farm-header-title">
             Fan
           </div>
+          <div class="farm-header-title">
+            Load
+          </div>
+          <div class="farm-header-title">
+            Core
+          </div>
+          <div class="farm-header-title">
+            Memory
+          </div>
         </div>
-      </div>
-      <div class="farm-col">
-        <div class="w-220px farm-col center">
-          GPU NAME
         </div>
+        <div class="farm-col">
         <div class="gpu-card flex align-center">
           <div class="w-220px gpu-card">
             {{parsedStats.test ? parsedStats.test.Text : '-'}}
           </div>
-          <div class="w-220px flex align-center space-around">
+          <div class="w-420px flex align-center space-around">
             <div class="farm-header-title">
               {{parsedStats.test ? parsedStats.test.tempData.Value : '-'}}
             </div>
             <div class="farm-header-title">
-              {{parsedStats.test ? parsedStats.test.tempData.Value : '-'}}
+              {{parsedStats.test ? parsedStats.test.fansData.Value : '-'}}
             </div>
-          </div>
+            <div class="farm-header-title">
+              {{parsedStats.test ? parsedStats.test.loadData.Value : '-'}}
+            </div>
+            <div class="farm-header-title">
+              {{parsedStats.test ? parsedStats.test.coreData.Value : '-'}}
+            </div>
+            <div class="farm-header-title">
+              {{parsedStats.test ? parsedStats.test.memData.Value : '-'}}
+            </div>
+
+                      </div>
         </div>
       </div>
     </div>
@@ -63,6 +84,36 @@ export default {
                 Value: child.Value
               }
             });
+          }
+          if (elem.Text === 'Fans') {
+            elem.Children.forEach(child => {
+              store.state.stats.test.fansData = {
+                Value: child.Value
+              }
+            });
+          }
+          if (elem.Text === 'Load') {
+            elem.Children.forEach(child => {
+              store.state.stats.test.loadData = {
+                Value: child.Value
+              }
+            });
+          }
+              if (elem.Text === 'Clocks') {
+            elem.Children.forEach(child => {
+              console.log(child);
+              if (child.Text === 'GPU Core') {
+              store.state.stats.test.coreData = {
+                Value: child.Value
+              } 
+              }
+              if (child.Text === 'GPU Memory') {
+              store.state.stats.test.memData = {
+                Value: child.Value
+              } 
+              }
+            });
+            
           }
         });
       }
