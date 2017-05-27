@@ -30,11 +30,19 @@ app.use(bodyParser.json())
 
 app.get('/data', function (req, res) {
 
-  request('http://192.168.88.241:8085/data.json', (error, response, body) => {
-    fs.writeFile('./static/my.json', body)
+  // request('http://192.168.88.241:8085/data.json', (error, response, body) => {
+  //   fs.writeFile('./static/my.json', body)
+  //   res.json(body)
+  // })
+  request('http://192.168.1.163:5555/', (error, response, body) => {
+    fs.writeFile('error.json', error)
+    fs.writeFile('response.json', response)
+    fs.writeFile('body.json', body)
     res.json(body)
   })
 })
+
+
 
 // other code
 app.listen(3000, function () {

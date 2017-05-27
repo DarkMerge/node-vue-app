@@ -4,120 +4,91 @@ __GENUS          : 2
 __CLASS          : Hardware
 __SUPERCLASS     : 
 __DYNASTY        : Hardware
-__RELPATH        : Hardware.InstanceId="3855",ProcessId="6c624315-5bb8-455a-9342-9667103d7f96"
+__RELPATH        : Hardware.InstanceId="3868",ProcessId="4bffcf9b-5106-4a13-8fcd-74d5e7964c84"
 __PROPERTY_COUNT : 6
 __DERIVATION     : {}
-__SERVER         : SERG-PC
+__SERVER         : ETHPC
 __NAMESPACE      : root\OpenHardwareMonitor
-__PATH           : \\SERG-PC\root\OpenHardwareMonitor:Hardware.InstanceId="3855",ProcessId="6c624315-5bb8-455a-9342-9667103d7f96"
-HardwareType     : CPU
-Identifier       : /intelcpu/0
-InstanceId       : 3855
-Name             : Intel Xeon E5450
-Parent           : 
-ProcessId        : 6c624315-5bb8-455a-9342-9667103d7f96
-
-__GENUS          : 2
-__CLASS          : Hardware
-__SUPERCLASS     : 
-__DYNASTY        : Hardware
-__RELPATH        : Hardware.InstanceId="3840",ProcessId="6c624315-5bb8-455a-9342-9667103d7f96"
-__PROPERTY_COUNT : 6
-__DERIVATION     : {}
-__SERVER         : SERG-PC
-__NAMESPACE      : root\OpenHardwareMonitor
-__PATH           : \\SERG-PC\root\OpenHardwareMonitor:Hardware.InstanceId="3840",ProcessId="6c624315-5bb8-455a-9342-9667103d7f96"
-HardwareType     : SuperIO
-Identifier       : /lpc/f71889f
-InstanceId       : 3840
-Name             : Fintek F71889F
-Parent           : /mainboard
-ProcessId        : 6c624315-5bb8-455a-9342-9667103d7f96
-
-__GENUS          : 2
-__CLASS          : Hardware
-__SUPERCLASS     : 
-__DYNASTY        : Hardware
-__RELPATH        : Hardware.InstanceId="3868",ProcessId="6c624315-5bb8-455a-9342-9667103d7f96"
-__PROPERTY_COUNT : 6
-__DERIVATION     : {}
-__SERVER         : SERG-PC
-__NAMESPACE      : root\OpenHardwareMonitor
-__PATH           : \\SERG-PC\root\OpenHardwareMonitor:Hardware.InstanceId="3868",ProcessId="6c624315-5bb8-455a-9342-9667103d7f96"
-HardwareType     : HDD
-Identifier       : /hdd/0
-InstanceId       : 3868
-Name             : GOODRAM C50
-Parent           : 
-ProcessId        : 6c624315-5bb8-455a-9342-9667103d7f96
-
-__GENUS          : 2
-__CLASS          : Hardware
-__SUPERCLASS     : 
-__DYNASTY        : Hardware
-__RELPATH        : Hardware.InstanceId="3866",ProcessId="6c624315-5bb8-455a-9342-9667103d7f96"
-__PROPERTY_COUNT : 6
-__DERIVATION     : {}
-__SERVER         : SERG-PC
-__NAMESPACE      : root\OpenHardwareMonitor
-__PATH           : \\SERG-PC\root\OpenHardwareMonitor:Hardware.InstanceId="3866",ProcessId="6c624315-5bb8-455a-9342-9667103d7f96"
+__PATH           : \\ETHPC\root\OpenHardwareMonitor:Hardware.InstanceId="3868",ProcessId="4bffcf9b-5106-4a13-8fcd-74d5e7964c84"
 HardwareType     : GpuAti
 Identifier       : /atigpu/0
-InstanceId       : 3866
-Name             : AMD Radeon HD 6670
+InstanceId       : 3868
+Name             : AMD Radeon HD 6490M
 Parent           : 
-ProcessId        : 6c624315-5bb8-455a-9342-9667103d7f96
+ProcessId        : 4bffcf9b-5106-4a13-8fcd-74d5e7964c84
+PSComputerName   : ETHPC
 
 __GENUS          : 2
 __CLASS          : Hardware
 __SUPERCLASS     : 
 __DYNASTY        : Hardware
-__RELPATH        : Hardware.InstanceId="3871",ProcessId="6c624315-5bb8-455a-9342-9667103d7f96"
+__RELPATH        : Hardware.InstanceId="3862",ProcessId="4bffcf9b-5106-4a13-8fcd-74d5e7964c84"
 __PROPERTY_COUNT : 6
 __DERIVATION     : {}
-__SERVER         : SERG-PC
+__SERVER         : ETHPC
 __NAMESPACE      : root\OpenHardwareMonitor
-__PATH           : \\SERG-PC\root\OpenHardwareMonitor:Hardware.InstanceId="3871",ProcessId="6c624315-5bb8-455a-9342-9667103d7f96"
+__PATH           : \\ETHPC\root\OpenHardwareMonitor:Hardware.InstanceId="3862",ProcessId="4bffcf9b-5106-4a13-8fcd-74d5e7964c84"
+HardwareType     : RAM
+Identifier       : /ram
+InstanceId       : 3862
+Name             : Generic Memory
+Parent           : 
+ProcessId        : 4bffcf9b-5106-4a13-8fcd-74d5e7964c84
+PSComputerName   : ETHPC
+
+__GENUS          : 2
+__CLASS          : Hardware
+__SUPERCLASS     : 
+__DYNASTY        : Hardware
+__RELPATH        : Hardware.InstanceId="3871",ProcessId="4bffcf9b-5106-4a13-8fcd-74d5e7964c84"
+__PROPERTY_COUNT : 6
+__DERIVATION     : {}
+__SERVER         : ETHPC
+__NAMESPACE      : root\OpenHardwareMonitor
+__PATH           : \\ETHPC\root\OpenHardwareMonitor:Hardware.InstanceId="3871",ProcessId="4bffcf9b-5106-4a13-8fcd-74d5e7964c84"
 HardwareType     : HDD
-Identifier       : /hdd/1
+Identifier       : /hdd/0
 InstanceId       : 3871
-Name             : Hitachi HDP725050GLA360
+Name             : Patriot Blast
 Parent           : 
-ProcessId        : 6c624315-5bb8-455a-9342-9667103d7f96
+ProcessId        : 4bffcf9b-5106-4a13-8fcd-74d5e7964c84
+PSComputerName   : ETHPC
 
 __GENUS          : 2
 __CLASS          : Hardware
 __SUPERCLASS     : 
 __DYNASTY        : Hardware
-__RELPATH        : Hardware.InstanceId="3839",ProcessId="6c624315-5bb8-455a-9342-9667103d7f96"
+__RELPATH        : Hardware.InstanceId="3858",ProcessId="4bffcf9b-5106-4a13-8fcd-74d5e7964c84"
 __PROPERTY_COUNT : 6
 __DERIVATION     : {}
-__SERVER         : SERG-PC
+__SERVER         : ETHPC
 __NAMESPACE      : root\OpenHardwareMonitor
-__PATH           : \\SERG-PC\root\OpenHardwareMonitor:Hardware.InstanceId="3839",ProcessId="6c624315-5bb8-455a-9342-9667103d7f96"
+__PATH           : \\ETHPC\root\OpenHardwareMonitor:Hardware.InstanceId="3858",ProcessId="4bffcf9b-5106-4a13-8fcd-74d5e7964c84"
+HardwareType     : CPU
+Identifier       : /intelcpu/0
+InstanceId       : 3858
+Name             : Intel Core i7-2635QM
+Parent           : 
+ProcessId        : 4bffcf9b-5106-4a13-8fcd-74d5e7964c84
+PSComputerName   : ETHPC
+
+__GENUS          : 2
+__CLASS          : Hardware
+__SUPERCLASS     : 
+__DYNASTY        : Hardware
+__RELPATH        : Hardware.InstanceId="3839",ProcessId="4bffcf9b-5106-4a13-8fcd-74d5e7964c84"
+__PROPERTY_COUNT : 6
+__DERIVATION     : {}
+__SERVER         : ETHPC
+__NAMESPACE      : root\OpenHardwareMonitor
+__PATH           : \\ETHPC\root\OpenHardwareMonitor:Hardware.InstanceId="3839",ProcessId="4bffcf9b-5106-4a13-8fcd-74d5e7964c84"
 HardwareType     : Mainboard
 Identifier       : /mainboard
 InstanceId       : 3839
-Name             : MSI G41M-P33 Combo(MS-7592)
+Name             : Apple Mac-94245A3940C91C80
 Parent           : 
-ProcessId        : 6c624315-5bb8-455a-9342-9667103d7f96
-
-__GENUS          : 2
-__CLASS          : Hardware
-__SUPERCLASS     : 
-__DYNASTY        : Hardware
-__RELPATH        : Hardware.InstanceId="3859",ProcessId="6c624315-5bb8-455a-9342-9667103d7f96"
-__PROPERTY_COUNT : 6
-__DERIVATION     : {}
-__SERVER         : SERG-PC
-__NAMESPACE      : root\OpenHardwareMonitor
-__PATH           : \\SERG-PC\root\OpenHardwareMonitor:Hardware.InstanceId="3859",ProcessId="6c624315-5bb8-455a-9342-9667103d7f96"
-HardwareType     : RAM
-Identifier       : /ram
-InstanceId       : 3859
-Name             : Generic Memory
-Parent           : 
-ProcessId        : 6c624315-5bb8-455a-9342-9667103d7f96
+ProcessId        : 4bffcf9b-5106-4a13-8fcd-74d5e7964c84
+PSComputerName   : ETHPC
 
 
 
