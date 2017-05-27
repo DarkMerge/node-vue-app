@@ -48,6 +48,8 @@ function parseData() {
 
         console.log(text);
 
+        // str.split(':') - делит строку на массив
+
         if (node.type === 'text') {
           if (text === '') {
             return lineCount < 5 ? '\n' : undefined
