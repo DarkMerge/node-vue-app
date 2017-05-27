@@ -9,14 +9,13 @@ export default {
     axios.get('/data')
       .then((response) => {
         formattedData = {}
-        setDepth(JSON.parse(JSON.stringify(response.data)), 0)
+        setDepth(JSON.parse(response.data), 0)
         store.commit('updateStats', formattedData)
       })
   },
   getLocalStats: () => {
     axios.get('/local-stats')
       .then((response) => {
-        console.log('response ', response);
         // store.commit('updateLocalStats', formattedData)
       })
   }
@@ -56,7 +55,6 @@ function setDepth(data, depth, key) {
 
   if (depth === 1) {
     formattedData.farmName = data.Text;
-    // console.log(_.at(data, 'Children[0]'));
 
     parseConfig.forEach((elem, index) => {
       if (index >= 0 && data.Children[index]) {
@@ -112,7 +110,7 @@ function parseStats(data) {
   if (depth === 0) {
     parsedJson['vlv'+depth] = {
       depth: depth,
-      Children: extendJson(data.Children)
+      Children: data.Children
     };
     depth++;
     return parsedJson;
@@ -124,7 +122,6 @@ function parseStats(data) {
     let prop = data[key];
     // main code start
 
-    // console.log('data[key]: ', data[key]);
     if (data[key].id == 1) {
       parsedJson.farmName = data[key].Text;
     }
@@ -134,8 +131,6 @@ function parseStats(data) {
 
     if (IS_OBJECT) {
       counter++;
-      // console.log('------------------IS_OBJECT----------------');
-      // console.log(data[key]);
       parseStats(data[key]);
     }
 
@@ -143,9 +138,4 @@ function parseStats(data) {
   }
 
   return parsedJson;
-}
-
-function extendJson(obj, depth) {
-  console.log('obj ', obj);
-  return obj;
 }
