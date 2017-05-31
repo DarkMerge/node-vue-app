@@ -1,5 +1,8 @@
 <template>
   <div class="dashboard">
+    <md-toolbar>
+      <h1 class="md-title">My Title</h1>
+    </md-toolbar>
     <farms></farms>
   </div>
 </template>
