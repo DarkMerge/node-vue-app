@@ -1,3 +1,3 @@
-const myParser = require('./build/parser')
+const myParser = require('./build/parser/index')
 
 myParser.getData()
